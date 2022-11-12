@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
+    <script src="show_nav.js" defer></script>
     <title>Home Page</title>
 </head>
 
@@ -17,35 +18,41 @@
     <header>
         <nav class="w-full bg-blue-100">
             <div class="flex flex-row justify-between p-6">
-                <div class="icon"><a class="flex flex-row" href="index.html"><img
-                            src="https://via.placeholder.com/25x25" alt="placeholder"><span
-                            class="mx-2">Luminate</span></a>
+                <div class="icon"><a class="flex flex-row" href="/index.html"><img src="https://via.placeholder.com/25x25"
+                            alt="placeholder"><span class="mx-2">Luminate</span></a>
                 </div>
                 <div class="nav-items">
-                    <ul class="flex flex-row text-gray-600">
-                        <li class="px-4 nav-link"><a class="hover:text-black flex" href="index.html"><span
+                    <div id="nav-mobile-button-container" class="hidden">
+                        <button id="nav-button">
+                            <span class="material-icons">
+                                menu
+                            </span>
+                        </button>
+                    </div>
+                    <ul class="flex flex-row text-gray-600 hide-nav" id="nav-item-list-container">
+                        <li class="px-4 nav-link"><a class="hover:text-black flex" href="/index.html"><span
                                     class="material-icons">
                                     home
                                 </span><span class="mx-1 link-text">Home</span></a></li>
                         <li class="px-4 nav-link" id="product-link"><a class="hover:text-black flex"
-                                href="products/index.html"><span class="material-icons">
+                                href="/products/index.html"><span class="material-icons">
                                     category
                                 </span>
                                 <span class="mx-1 link-text">Products
                                     &#9660;</span></a>
                             <ul id="product-list" class="bg-blue-100 p-2 hidden">
-                                <li class="product"><a href="products/DIY/index.html">DIY
+                                <li class="product"><a href="/products/DIY/index.html">DIY
                                         Kit</a></li>
-                                <li class="product"><a href="products/Assembled/index.html">Assembled Kit</a></li>
+                                <li class="product"><a href="/products/Assembled/index.html">Assembled Kit</a></li>
                             </ul>
                         </li>
-
-                        <li class="px-4 nav-link"><a class="hover:text-black flex" href="about.html"><span
+    
+                        <li class="px-4 nav-link"><a class="hover:text-black flex" href="/about.html"><span
                                     class="material-icons">
                                     description
                                 </span>
                                 <span class="mx-1 link-text">About</span></a></li>
-                        <li class="px-4 nav-link"><a class="hover:text-black flex" href="contact.html"><span
+                        <li class="px-4 nav-link"><a class="hover:text-black flex" href="/contact.html"><span
                                     class="material-icons">
                                     contact_page
                                 </span><span class="mx-1 link-text">Contact</span></a></li>
