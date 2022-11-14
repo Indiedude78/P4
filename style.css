@@ -35,12 +35,24 @@ main {
     width: 100%;
     /* set height to viewport height */
     min-height: 100vh;
+    margin-top: 75px;
 }
 
 
 nav {
     text-transform: uppercase;
+    z-index: 5;
+    /* Black background color */
+    position: fixed;
+    /* Make it stick/fixed */
+    top: 0;
+    /* Stay on top */
+    width: 100%;
+    /* Full width */
+    transition: top 0.3s;
+    /* Transition effect when sliding down (and up) */
 }
+
 
 #product-link {
     position: relative;
@@ -132,44 +144,54 @@ a {
 @keyframes move-one {
     0% {
         transform: translate(0, 0);
+        background-color: #52ce52;
     }
 
     25% {
         transform: translate(10%, 10%);
+        background-color: #0014c7;
     }
 
     50% {
         transform: translate(-20%, 35%);
+        background-color: #c70000;
     }
 
     75% {
         transform: translate(10%, 25%);
+        background-color: #c700c7;
     }
 
     100% {
         transform: translate(0, 0);
+        background-color: #52ce52;
     }
 }
 
 @keyframes move-two {
     0% {
         transform: translate(0, 0);
+        background-color: #529cce;
     }
 
     25% {
         transform: translate(-50%, 15%);
+        background-color: #c3e246;
     }
 
     50% {
         transform: translate(-65%, 5%);
+        background-color: #c70000;
     }
 
     75% {
         transform: translate(-30%, 10%);
+        background-color: #c700c7;
     }
 
     100% {
         transform: translate(0, 0);
+        background-color: #529cce;
     }
 
 }
@@ -177,44 +199,54 @@ a {
 @keyframes move-three {
     0% {
         transform: translate(0, 0);
+        background-color: #ce5252;
     }
 
     25% {
         transform: translate(-80%, 50%);
+        background-color: #c3e246;
     }
 
     50% {
         transform: translate(20%, -80%);
+        background-color: #0014c7;
     }
 
     75% {
         transform: translate(-60%, -20%);
+        background-color: #c700c7;
     }
 
     100% {
         transform: translate(0, 0);
+        background-color: #ce5252;
     }
 }
 
 @keyframes move-four {
     0% {
         transform: translate(0, 0);
+        background-color: #ce5252;
     }
 
     25% {
         transform: translate(-45%, 10%);
+        background-color: #c3e246;
     }
 
     50% {
         transform: translate(-30%, -50%);
+        background-color: #0014c7;
     }
 
     75% {
         transform: translate(-25%, 5%);
+        background-color: #c700c7;
     }
 
     100% {
         transform: translate(0, 0);
+        background-color: #ce5252;
     }
 }
 
@@ -319,6 +351,7 @@ footer {
     bottom: 0;
     width: 100%;
     z-index: 5;
+    transition: bottom 0.5s;
 }
 
 /*media queries*/
@@ -392,6 +425,8 @@ footer {
         width: 100%;
     }
 
+
+
     /* Product Page */
 
     .product-container {
@@ -443,4 +478,60 @@ footer {
 
 .product-buttons button:last-of-type {
     margin-top: 10px;
+}
+
+/* Contact Page */
+#contact-form {
+    margin-top: 5%;
+    position: relative;
+    z-index: 3;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.8px);
+    -webkit-backdrop-filter: blur(4.8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+#contact-form * {
+    margin-top: 8px;
+    padding: 8px;
+}
+
+#contact-form input,
+select,
+textarea {
+    border: black 1px solid;
+}
+
+.contact-submit {
+    animation: changeBackgroundColor 5s infinite ease-out;
+}
+
+.contact-submit:hover {
+    animation-play-state: paused;
+}
+
+@keyframes changeBackgroundColor {
+    0% {
+        background-color: #43e343;
+    }
+
+    25% {
+        background-color: #c142f0;
+    }
+
+    50% {
+        background-color: #2F80ED;
+    }
+
+    75% {
+        background-color: #F2994A;
+    }
+
+    100% {
+        background-color: #54e170;
+    }
 }
