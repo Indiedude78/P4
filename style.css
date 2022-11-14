@@ -31,10 +31,10 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-body {
+main {
     width: 100%;
     /* set height to viewport height */
-    height: 100vh;
+    min-height: 100vh;
 }
 
 
@@ -391,6 +391,17 @@ footer {
     #about-container {
         width: 100%;
     }
+
+    /* Product Page */
+
+    .product-container {
+        flex-wrap: wrap;
+    }
+
+    .product-container * {
+        width: 100%;
+        margin-top: 16px;
+    }
 }
 
 /* Stagger animation */
@@ -428,4 +439,8 @@ footer {
 #about-container {
     margin-top: 30%;
     margin-bottom: 15%;
+}
+
+.product-buttons button:last-of-type {
+    margin-top: 10px;
 }
