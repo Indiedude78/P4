@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap");
+
 /* Reset Css */
 *,
 *::before,
@@ -6,6 +8,10 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
+}
+
+body {
+  font-family: "Maven Pro", sans-serif;
 }
 
 .navigation-container {
@@ -86,7 +92,7 @@ nav ul {
 nav a {
   color: rgb(27, 26, 26);
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 1rem;
   display: inline-block;
   transition: color 0.3s;
@@ -645,11 +651,19 @@ main #img-container-parent {
 main .img-container {
   display: grid;
   place-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+main .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 main #welcome-paragraph-container {
   width: 80%;
-  margin: 20rem auto;
+  margin: 10rem auto;
   padding: 1rem;
   border: 1px solid #000;
   box-shadow: -4px -29px 32px -13px rgba(247, 70, 70, 0.977),
@@ -704,13 +718,14 @@ main .testimonials-container {
 }
 
 .testimonial-text {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 2.3rem;
+  font-weight: 500;
+  font-style: italic;
   text-align: center;
 }
 
 .testimonial-author {
-  font-size: 1.2rem;
+  font-size: 1.9rem;
   font-weight: 400;
   text-align: right;
 }
@@ -735,6 +750,13 @@ main .testimonials-container {
   font-size: 1.5rem;
   font-weight: 500;
 }
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 .card-button-container {
   margin-top: 2rem;
@@ -768,6 +790,12 @@ main .testimonials-container {
 .product-image {
   width: fit-content;
   margin: auto;
+  object-fit: cover;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
