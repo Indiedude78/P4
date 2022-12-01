@@ -1,3 +1,5 @@
+//DEVELOPER Smit Joshi, IS117-101, Fall 2022
+
 // get nav list items
 let navItems = document.querySelectorAll('.nav-item a');
 let navigationContainer = document.querySelector('.navigation-container');
