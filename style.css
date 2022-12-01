@@ -169,15 +169,28 @@ footer {
 
 .footer {
   width: 100%;
-  height: 4rem;
+  height: 6.5rem;
   background-color: rgb(238, 174, 202);
   background: radial-gradient(circle,
       rgba(238, 174, 202, 1) 0%,
       rgba(148, 187, 233, 1) 100%);
   backdrop-filter: blur(10px);
   display: flex;
-  flex: row;
+  flex-direction: column;
   justify-content: center;
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.copyright-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: large;
 }
 
 .footer-icon {
