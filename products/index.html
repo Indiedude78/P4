@@ -5,127 +5,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css" />
-    <script src="../show_nav.js" defer></script>
     <title>All Products</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../main.js" defer></script>
 </head>
 
 <body>
-    <!-- Header Portion -->
-    <header>
-        <nav class="w-full bg-blue-100">
-            <div class="flex flex-row justify-between p-6">
-                <div class="icon"><a class="flex flex-row" href="../index.html"><img
-                            src="https://via.placeholder.com/25x25" alt="placeholder"><span
-                            class="mx-2">Luminate</span></a>
-                </div>
-                <div class="nav-items">
-                    <div id="nav-mobile-button-container" class="hidden">
-                        <button id="nav-button">
-                            <span class="material-icons">
-                                menu
-                            </span>
-                        </button>
-                    </div>
-                    <ul class="flex flex-row text-gray-600 hide-nav" id="nav-item-list-container">
-                        <li class="px-4 nav-link"><a class="hover:text-black flex" href="../index.html"><span
-                                    class="material-icons">
-                                    home
-                                </span><span class="mx-1 link-text">Home</span></a></li>
-                        <li class="px-4 nav-link" id="product-link"><a class="hover:text-black flex"
-                                href="index.html"><span class="material-icons">
-                                    category
-                                </span>
-                                <span class="mx-1 link-text">Products
-                                    &#9660;</span></a>
-                            <ul id="product-list" class="bg-blue-100 p-2 hidden">
-                                <li class="product"><a href="DIY/index.html">DIY
-                                        Kit</a></li>
-                                <li class="product"><a href="Assembled/index.html">Assembled Kit</a></li>
-                            </ul>
-                        </li>
+    <!--Header-->
+    <header class="">
 
-                        <li class="px-4 nav-link"><a class="hover:text-black flex" href="../about.html"><span
-                                    class="material-icons">
-                                    description
-                                </span>
-                                <span class="mx-1 link-text">About</span></a></li>
-                        <li class="px-4 nav-link"><a class="hover:text-black flex" href="../contact.html"><span
-                                    class="material-icons">
-                                    contact_page
-                                </span><span class="mx-1 link-text">Contact</span></a></li>
-                    </ul>
-                </div>
+        <nav class="navbar navbar-light">
+            <div class="brand">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="https://via.placeholder.com/25x25" alt="" loading=" lazy">
+                    <span>Luminate</span>
+                </a>
             </div>
-        </nav>
-    </header>
-    <main>
-        <div class="w-full h-5/6" id="body-container">
-            <div class="body-layer-1" id="background-circle-container">
-                <div class="background-circle" id="circle-one"></div>
-                <div class="background-circle" id="circle-two"></div>
-                <div class="background-circle" id="circle-three"></div>
-                <div class="background-circle" id="circle-four"></div>
-            </div>
-            <div class="body-layer-2" id="foreground-container">
-                <div>
-                    <h1 class="text-5xl text-center">Luminate</h1>
-                    <h6 class="text-center">The best way to light up your life</h6>
-                </div>
-                <div class="flex flex-col p-4 w-full">
-                    <div class="w-full p-2 m-auto">
-                        <h3 class="text-3xl uppercase text-center">All Products</h3>
-                    </div>
-                    <div class="w-3/4 m-auto" id="card-container-parent">
-                        <ul class="flex flex-row justify-between align-middle p-4 gap-2 w-full" id="card-container">
-                            <li class="p-4 m-2 product-item w-1/2">
-                                <a class="flex flex-col" href="DIY/index.html">
-                                    <img src="https://picsum.photos/150/150" alt="placeholder">
-                                    <div>
-                                        <span class="text-center text-xl m-4 p-2">DIY Kit</span>
-                                        <p class="p-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
-                                            voluptatum
-                                            eligendi enim ipsum et non fugiat dignissimos quaerat soluta eius deleniti
-                                            mollitia, quam laudantium iste voluptatem amet perspiciatis facere at!
-                                        </p>
-                                    </div>
 
+            <div class="navigation-container">
+                <div class="mobile-button-container">
+                    <button class="nav-button">
+                        <div class="nav-button-line " id="line-one"></div>
+                        <div class="nav-button-line" id="line-two"></div>
+                        <div class="nav-button-line" id="line-three"></div>
+                    </button>
+                </div>
+
+                <ul class="nav-tabs">
+
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item products"><a href="./index.html" class="nav-link">Products&#9660;</a>
+                        <ul class="sub-nav-menu">
+                            <li class="nav-item">
+                                <a href="./diy.html" class="nav-link">DIY Kit
                                 </a>
                             </li>
-                            <li class="p-4 m-2 product-item w-1/2">
-                                <a class="flex flex-col" href="Assembled/index.html">
-                                    <img src="https://picsum.photos/150/150" alt="placeholder">
-                                    <div>
-                                        <span class="text-center text-xl m-4 p-2">Assembled Kit</span>
-                                        <p class="p-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
-                                            voluptatum
-                                            eligendi enim ipsum et non fugiat dignissimos quaerat soluta eius deleniti
-                                            mollitia, quam laudantium iste voluptatem amet perspiciatis facere at!
-                                        </p>
-                                    </div>
+                            <li class="nav-item">
+                                <a href="./assembled.html" class="nav-link">Assembled Kit
                                 </a>
                             </li>
                         </ul>
+                    </li>
+                    <li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Main-->
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 heading">
+                    <h1>All Products</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 card-container">
+                    <div class="card product-card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">DIY Kit</h5>
+                            <p class="card-text">Our DIY Kit comes with all the necessary materials for you to assembled
+                                and install the Luminate LED lights</p>
+                            <div class="card-button-container">
+                                <a href="./diy.html" class="card-button">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 card-container">
+                    <div class="card product-card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Assembled Kit</h5>
+                            <p class="card-text">Our Assembled Kit is fully assembled and ready to install. There is no
+                                need to try and figure out how to put everything together.</p>
+                            <div class="card-button-container">
+                                <a href="./assembled.html" class="card-button">View</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-        </div>
     </main>
 
-    <!-- Footer Portion -->
+    <!--Footer-->
     <footer>
-        <div class="w-full h-16 bg-blue-100 flex flex-row justify-center">
-            <div class="m-2">
-                <svg class="w-6 h-6 text-blue-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <div class="footer">
+            <div class="footer-icon">
+                <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
                         d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
             </div>
-            <div class="m-2">
-                <svg class="w-6 h-6 text-pink-600 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <div class="footer-icon">
+                <svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z" />
                 </svg>

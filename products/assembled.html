@@ -20,8 +20,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../main.js" defer></script>
 </head>
 
 <body class="light">
@@ -30,7 +30,7 @@
 
         <nav class="navbar navbar-light">
             <div class="brand">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="../index.html">
                     <img src="https://via.placeholder.com/25x25" alt="" loading=" lazy">
                     <span>Luminate</span>
                 </a>
@@ -47,63 +47,66 @@
 
                 <ul class="nav-tabs">
 
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item products"><a href="products/index.html" class="nav-link">Products&#9660;</a>
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item products"><a href="./index.html" class="nav-link">Products&#9660;</a>
                         <ul class="sub-nav-menu">
                             <li class="nav-item">
-                                <a href="products/diy.html" class="nav-link">DIY Kit
+                                <a href="./diy.html" class="nav-link">DIY Kit
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="products/assembled.html" class="nav-link">Assembled Kit
+                                <a href="./assembled.html" class="nav-link">Assembled Kit
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
     <!--Main-->
     <main>
-        <div id="body-container">
-            <div class="body-layer-1" id="background-circle-container">
-                <div class="background-circle" id="circle-one"></div>
-                <div class="background-circle" id="circle-two"></div>
-                <div class="background-circle" id="circle-three"></div>
-                <div class="background-circle" id="circle-four"></div>
-                <div class="background-circle" id="circle-five"></div>
-                <div class="background-circle" id="circle-six"></div>
-                <div class="background-circle" id="circle-seven"></div>
-                <div class="background-circle" id="circle-eight"></div>
+        <div class="product-container">
+            <div class="heading">
+                <h1>Assembled kit</h1>
             </div>
-            <div class="form-container body-layer-2">
-                <div class="contact heading">
-                    <h1>Contact Us</h1>
-                    <h6 class="contact-sub-heading">We'd love to hear from you</h6>
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300/300" alt="" loading="lazy">
                 </div>
-                <form action="" autocomplete="off">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" />
-                    <label for="email">Email</label>
-                    <input type="text" id="email" name="email" placeholder="Your email" />
-                    <label for="reason">Reason for Contact</label>
-                    <select name="reason" id="reason" required>
-                        <option value="general">General Inquiry</option>
-                        <option value="product">Product Inquiry</option>
-                        <option value="refund">Refund</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" cols="20" rows="5" required></textarea>
-                    <button class="contact-submit" type="submit">Send</button>
-
-                </form>
+                <!--Bootstrap Product information-->
+                <div class="product-info">
+                    <div class="product-description">
+                        <h2>Description</h2>
+                        <p>
+                            The Luminate Assembled Kit is a complete kit that is ready to install behind any TV or
+                            monitor. Just follow the instructions and you will have a beautiful lighted display in no
+                            time.
+                        </p>
+                        <h2>What's included</h2>
+                        <ul>
+                            <li>1x Luminate Assembled Kit</li>
+                            <li>1x Luminate Power Supply</li>
+                            <li>1x Luminate Remote</li>
+                            <li>1x Luminate Mounting Kit</li>
+                            <li>1x Installation Manual</li>
+                        </ul>
+                        <h2>Shipping Policy</h2>
+                        <p>
+                            We ship all orders within 1-2 business days. All orders are shipped via USPS First Class
+                            Mail. Shipping times vary depending on your location. Please allow 3-5 business days for
+                            delivery.
+                        </p>
+                    </div>
+                    <div class="product-button-container">
+                        <button class="product-button">Buy Now</button>
+                    </div>
+                </div>
             </div>
         </div>
-
     </main>
 
     <!--Footer-->
